@@ -4,6 +4,7 @@ const posts = require("./data/posts");
 const port = 3000;
 const router = require("./routers/posts-routers")
 
+app.use(express.static("public"))
 app.use("/posts-routers", router)
 
 app.get("/", (req,res) => {
